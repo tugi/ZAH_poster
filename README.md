@@ -1,3 +1,7 @@
+REQUIRED LATEX PACKAGES: 
+beamer (duh)
+pst-barcode
+
 Hi.
 
 This LaTeX poster template is using the Uni Heidelberg corporate identity colours as specified at

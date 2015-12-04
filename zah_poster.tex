@@ -1,26 +1,38 @@
 \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
 
-\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposterzah}
+\usepackage[orientation=portrait,size=a0,scale=1.2]{beamerposterzah}
 \usetheme{zah}
 
+\usepackage{qrcode}
 \usepackage[british]{babel}
-
 \usepackage{amsmath,amsthm,amssymb,latexsym}
-
 %\usepackage{times}\usefonttheme{professionalfonts}  % Uncomment to use Times as the main font
 \usefonttheme[onlymath]{serif} % Uncomment to use a Serif font within math environments
-
 \boldmath % Use bold for everything within the math environment
-
 \usepackage{booktabs} % Top and bottom rules for tables
-
 \graphicspath{{figures/}} % Location of the graphics files
 
 \usecaptiontemplate{\small\structure{\insertcaptionname~\insertcaptionnumber: }\insertcaption} % A fix for figure numbering
 
 \newcommand{\myemail}{name@uni-heidelberg.de}
 \newcommand{\myphone}{xxxx}
-
+\newcommand{\myurlA}{\texttt{http://www.ita.uni-heidelberg.de/\~{}username/}} %careful with tildes!!
+\newcommand{\myurlB}{http://www.google.com/}
+\newcommand{\myvcard}{BEGIN:VCARD\?
+VERSION:4.0\?
+N:Last;First;;Prefix;Suffix\?
+FN:FullName\?
+TITLE:JobTitle\?
+ORG:Organisation\?
+ADR;HOME:;;Home_street;Home_city;Home_region;Home_zip;Home_country\?
+ADR;WORK:;;Office_street;Office_city;Office_region;Office_zip;Office_country\?
+TEL;TYPE=home,voice:Home_phone\?
+TEL;TYPE=work,voice;PREF:Office_phone\?
+TEL;TYPE=fax:Office_Fax\?
+TEL;TYPE=cell:Mobile\?
+EMAIL:Email\?
+URL:Url\?
+END:VCARD\?}
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
@@ -276,13 +288,24 @@ Treatment 3 & 0.0009271 & 0.296 \\
 \setbeamercolor{block title}{fg=UniRedOutline,bg=UniYellow} % Change the block title color
 
 \begin{block}{Contact Information}
-
+\begin{columns}
+\begin{column}{0.8 \textwidth}
 \begin{itemize}
-\item Web: \href{http://www.ita.uni-heidelberg.de/~ttugendhat/}{http://www.ita.uni-heidelberg.de/\~{}ttugendhat/}
+\item Web: \myurlA
 % Careful with the ol' tilde!
 \item Email: \href{mailto:\myemail}{\myemail}
 \item Phone: +49 (0)6221 54-\myphone
 \end{itemize}
+\end{column}
+\begin{column}{0.2 \textwidth}
+\begin{center}
+	%\qrcode[height=0.7 \textwidth]{\myurlB}\\~\\
+	%{Website}\\~\\
+	\qrcode[height=0.6 \textwidth]{\myvcard}\\~\\vCard
+\end{center}
+\end{column}
+
+\end{columns}
 
 \end{block}
 
