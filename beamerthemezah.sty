@@ -1,6 +1,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ProvidesPackage{beamerthemezah}
+\ProvidesPackage{beamercolorthemezah}
 \RequirePackage{unihdcolours}
 \selectcolormodel{cmyk}
 \selectcolormodel{rgb}
@@ -74,9 +74,12 @@
       \begin{column}{.65\paperwidth}
         \vskip8ex
         \raggedleft
-        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[1ex]}
+        \vspace{2cm}
         \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
         \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
+      \end{column}
+      \begin{column}{.01\paperwidth}
       \end{column}
       \begin{column}{.20\paperwidth}
         \vskip8ex
