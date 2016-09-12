@@ -1,4 +1,4 @@
-## Core latex/pdflatex auxiliary files:
+# Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
 *.log
@@ -178,4 +178,5 @@ TSWLatexianTemp*
 
 # KBibTeX
 *~[0-9]*
-.DS_Store
+
+*DS_Store
